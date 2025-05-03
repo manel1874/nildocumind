@@ -3,6 +3,7 @@ export enum OpenAIModels {
   GPT_4O_MINI = "gpt-4o-mini",
   GPT_4_1 = "gpt-4.1",
   GPT_4_1_MINI = "gpt-4.1-mini",
+  GEMMA_3_4B_IT = "google/gemma-3-4b-it"
 }
 
 export enum LocalModels {

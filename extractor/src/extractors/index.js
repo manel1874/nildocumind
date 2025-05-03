@@ -2,14 +2,14 @@ import { ollamaExtractor } from "./ollama.js";
 import { openAIExtractor } from "./openAI.js";
 import { googleExtractor } from "./google.js";
 
-export const OpenAIModels = ["gpt-4o", "gpt-4o-mini", "gpt-4.1", "gpt-4.1-mini"];
+export const OpenAIModels = ["gpt-4o", "gpt-4o-mini", "gpt-4.1", "gpt-4.1-mini", "google/gemma-3-4b-it"];
 export const LocalModels = ["llama3.2-vision"];
 export const GoogleModels = [
   "gemini-2.0-flash-001", 
   "gemini-2.0-flash-lite-preview-02-05", 
   "gemini-1.5-flash",
   "gemini-1.5-flash-8b",
- "gemini-1.5-pro"
+  "gemini-1.5-pro"
 ];
 
 export function getExtractor(model) {

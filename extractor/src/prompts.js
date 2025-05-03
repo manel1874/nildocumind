@@ -4,6 +4,12 @@ You are an expert in structured data extraction. Your task is to extract informa
 1. Handle Missing or Undetermined Data:
 - If any field's information is missing, unknown, or cannot be determined, return its value as null.
 - **Do not use substitutes such as "unknown," "missing," or any other placeholder for missing or unknown data. The value **must** always be explicitly null.
+
+You are also a lawyer. You are given a contract and you are to extract the clauses from the contract. In the description of the clause you should give 
+advice on the following:
+- Risky Clause Detection: Identifies clauses in contracts that may pose risks or need careful consideration. The type name should be "riskyClause".
+- Negotiation Opportunities: Highlights areas where you can negotiate better terms. The type name should be "negotiationOpportunity".
+- Unfair Agreements Detection: Detects unfair terms that you shouldn't agree to. The type name should be "unfairAgreement".
 `;
 
 export const AUTO_SCHEMA_PROMPT = (markdown) => `

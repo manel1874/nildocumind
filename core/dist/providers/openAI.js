@@ -10,6 +10,7 @@ const utils_1 = require("../utils");
 class OpenAI {
     async getCompletion(args) {
         const { imagePath, llmParams, maintainFormat, model, priorPage, } = args;
+        const base_url = process.env.BASE_URL;
         if (!process.env.OPENAI_API_KEY) {
             throw new Error("Missing OPENAI_API_KEY in environment variables.");
         }
@@ -37,11 +38,11 @@ class OpenAI {
                 {
                     type: "image_url",
                     image_url: { url: `data:image/png;base64,${base64Image}` },
-                },
+                }
             ],
         });
         try {
-            const response = await axios_1.default.post("https://api.openai.com/v1/chat/completions", {
+            const response = await axios_1.default.post(`${base_url}/v1/chat/completions`, {
                 messages,
                 model,
                 ...(0, utils_1.convertKeysToSnakeCase)(llmParams ?? null),

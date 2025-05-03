@@ -44,7 +44,7 @@ export async function extract({ file, schema, template, model, autoSchema }) {
     }
 
     const { markdown, totalPages, fileName } = await convertFile(file, defaultModel);
-
+    
     if (autoSchema) {
       finalSchema = await autogenerateSchema(markdown, defaultModel, autoSchema); 
       if (!finalSchema) {

@@ -14,8 +14,10 @@ const getCompletion = async ({ apiKey, imagePath, llmParams, maintainFormat, mod
     const validModelsForOpenAi = ["gpt-4o", "gpt-4o-mini"];
     const baseUrl = process.env.BASE_URL || "https://api.openai.com/v1";
     if (baseUrl !== "https://api.openai.com/v1") {
-        if (!validModelsForCustomBaseUrl.includes(model)) {
-            throw new Error(`Invalid model "${model}" for custom base URL. Valid options are: ${validModelsForCustomBaseUrl.join(", ")}.`);
+        if (baseUrl !== "https://test-nilrag.nilai.sandbox.nilogy.xyz") {
+            if (!validModelsForCustomBaseUrl.includes(model)) {
+                throw new Error(`Invalid model "${model}" for custom base URL. Valid options are: ${validModelsForCustomBaseUrl.join(", ")}.`);
+            }
         }
     }
     else {

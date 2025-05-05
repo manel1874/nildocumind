@@ -1,7 +1,7 @@
 
-# nilDocumind
+# blindDocumind
 
-**`nilDocumind`** is a fork of Documind that integrates Nillion’s SecretLLM for secure, blind-computation processing. By leveraging SecretLLM’s privacy-first technology, nilDocumind keeps all sensitive document contents encrypted throughout extraction and analysis.
+**`blindDocumind`** is a fork of Documind that integrates Nillion’s SecretLLM for secure, blind-computation processing. By leveraging SecretLLM’s privacy-first technology, blindDocumind keeps all sensitive document contents encrypted throughout extraction and analysis.
 
 This fork was specifically created to complement the Blind Lawyer tool. Now, we present the original README unchanged.
 
